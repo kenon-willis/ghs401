@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Chatroom Register</title>
+        
+        
+        <link href="css/styles.css" rel="stylesheet">
+     <link rel="icon" type="image/x-icon" href="https://codehs.com/uploads/260bf716583dcff7c9e928680b827b67">
+  </head>
+  
+  
+  
+  
+  <body class="container my-5">
+
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">AP Computer Science Principles</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://granadacs.codehs.me/">Previous Years</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://granadacs.codehs.me/chatroomRegister.html">Chatroom</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://granadacs.codehs.me/FirebaseProject2021/firebaseLogin2022.html">Firebase Project</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        
+                     
+                 
+        
+        <div class="parallax my-5">
+        
+        </div>
+        
+        
+        
+        <!-- Page content-->
+        <div class="container">
+            <div class="text-center mt-5">
+                <h1>Chatroom Register</h1><br>
+                
+                <form>
+                  <label >Email:</label><br>
+                  <input type="text" id="email" ><br><br>
+                  <label>Password:</label><br>
+                  <input type="password" id="password"><br><br><br>
+                  
+                  <button type="button" class="btn btn-dark" onclick="register()">Register</button>
+                </form> 
+                
+                <br><br>
+                
+                <p class="lead">Already have an account? Click <a href="chatroomLogin.html">here</a> to login</p>
+                
+            </div>
+            
+            
+                
+                
+
+              
+                
+       
+            
+            
+            
+            
+            
+        
+            
+            
+            
+            
+        </div>
+        
+        
+        <div class="parallax my-5">
+        
+        </div>
+        
+        
+        
+        <div>
+
+              <footer class="text-center text-lg-start" style="background-color: #222222">
+                <div class="container d-flex justify-content-center py-5">
+                  <button type="button" class="btn btn-white btn-lg btn-floating mx-2" style="background-color: #444444;">
+                    <a href="https://www.livermoreschools.org/granadahigh"><i class="fab fa-facebook-f">GHS</i>  </a> 
+                  </button>
+                  <button type="button" class="btn btn-white btn-lg btn-floating mx-2" style="background-color: #444444;">
+                    <a href = "mailto: kwillis@lvjusd.org">Contact Me</a>
+                  </button>
+                  <button type="button" class="btn btn-white btn-lg btn-floating mx-2" style="background-color: #444444;">
+                    <a href="https://www.livermoreschools.org/"><i class="fab fa-instagram">LVJUSD</i> </a> 
+                  </button>
+                
+                </div>
+            
+                <!-- Copyright -->
+                <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                  © 2023 Copyright:
+                  <a class="text-white" href="https://sites.google.com/lvjusd.org/willis/home">GHS CompSci</a>
+                </div>
+                <!-- Copyright -->
+              </footer>
+  
+        </div>
+<!-- End of .container -->
+        
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        
+        
+        
+         <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase.js"></script>
+        
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+        
+        <script>
+          // Your web app's Firebase configuration
+          
+          
+          var firebaseConfig = {
+   	        
+   	        apiKey: "AIzaSyDsi8FwaZTxIXou9wQoE5j50BT0Jm6s6VI",
+            authDomain: "chatroom2024-9e799.firebaseapp.com",
+            projectId: "chatroom2024-9e799",
+            storageBucket: "chatroom2024-9e799.appspot.com",
+            messagingSenderId: "896478347058",
+            appId: "1:896478347058:web:bece951eb4c9621d76e12b"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+        </script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <script>
+         	function register(){
+         	    
+         	   
+                //pull the email and username from the inputs on your html page
+                var email = document.getElementById("email").value
+                var password = document.getElementById("password").value
+                
+                //save the username by splicing the string before the @ sign
+                var username = email.substring(0, email.indexOf("@"))
+                //alert(username)  //check if it works, delete or comment this out later
+                
+                
+                //this is firebase code from the documentation
+                //it checks the email address and password for the correct format
+                //if everything looks good, a user will be created in firebase
+                firebase.auth().createUserWithEmailAndPassword(email, password)
+                                  .then((userCredential) => {
+                                      
+                                    //save the username in session storage so it can be used in the chatroom
+                                    sessionStorage.setItem("username",username)
+                                    //we will use this variable later to validate if the user is logged in
+                                    sessionStorage.setItem("loggedIn","yes")
+                                      
+                                      
+                                    // Signed in 
+                                    var user = userCredential.user;
+                                    window.alert("Thank you, " + username + ", your account has been created!")
+                                    
+                                    //direct the website to the chatroomPage
+                                    window.location="chatroom.html"
+                                    // ...
+                                  })
+                                  .catch((error) => {
+                                    var errorCode = error.code;
+                                    var errorMessage = error.message;
+                                    // ..
+                                    window.alert("Error: "+ errorMessage);
+                                  });
+               }
+        </script>
+
+        
+    </body>
+
+</html>
