@@ -1,0 +1,194 @@
+button,input{
+    
+    
+    width: 20%;
+}
+
+
+label {display: block;}
+
+
+form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+input[type=email], select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+textarea[name=message] {
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+video{
+    width: 100px;
+    height:94px;
+    
+    border-radius: 11px;
+}
+
+table{/* This is for the table in the chatroom */
+    border: 1px solid black;
+    width:80%;
+    margin:auto;
+}
+
+th:first-child {  /* This is for the first header in the table */
+    width:10%;
+    background-color: #eeeeee;
+}
+  
+th:nth-child(2) { /* This is for the second header in the table */
+    width:90%;
+    text-align: left;
+    padding-left: 3%;
+}
+
+td:first-child {  /* This is for the first column in the table */
+    width:10%;
+    background-color: #eeeeee;
+    text-align: left;
+    padding-left:20px;
+}
+  
+td:nth-child(2) {  /* This is for the second column in the table */
+    width:90%;
+    text-align: left;
+    padding-left: 3%;
+}
+
+.chatroomText{  /* This is for the Welcome and the textbox to enter a msg*/
+    width:80%;
+    margin:auto;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.parallax{
+    background-image: url("https://codehs.com/uploads/874bda2f0d4e29a04019eabb8e223c89");
+    background-position: center top;
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    
+    text-align: center;
+    
+}
+
+footer a{
+    color: white;
+    font-size: 70%;
+    text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pic{
+    display: inline-block;
+    padding: 1em;
+    border: 1px solid black;
+    
+}
+
+.pics{
+    margin: auto;
+    width: 80%;
+    margin-bottom: 10px;
+    text-align:center;
+  
+ }
+ 
+ 
+ .parallax8 {
+  /* The image used */
+  background-image: url("https://codehs.com/uploads/f0f796bc400d45a15ad494f02713ef83");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+@media only screen and (max-width: 980px) {
+ 
+  
+     body{
+         
+         background-color: black;
+         color: white;
+     }
+     .pic{
+        
+        border: 1px solid white;
+        
+    }
+    
+    .parallax{
+        background-attachment: scroll;
+    }
+  
+}
