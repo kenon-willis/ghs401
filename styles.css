@@ -3,7 +3,9 @@ button,input{
     
     width: 20%;
 }
-
+body{
+   background-color: orange;
+}
 
 label {display: block;}
 
