@@ -180,10 +180,12 @@ footer a{
   
      body{
          
-         background-color: blue;
+         background-color: black;
          color: white;
      }
-    
+    .parallax{
+          background-attachment: scroll; 
+    }
   
      .pic{
         
