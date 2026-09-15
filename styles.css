@@ -180,7 +180,7 @@ footer a{
   
      body{
          
-         background-color: orange;
+         background-color: black;
          color: white;
      }
      .pic{
@@ -189,8 +189,5 @@ footer a{
         
     }
     
-    .parallax{
-        background-attachment: scroll;
-    }
-  
+   
 }
